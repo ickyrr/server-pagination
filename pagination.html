@@ -1,0 +1,22 @@
+<head>
+  <title>pagination</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+
+  {{> hello}}
+</body>
+
+<template name="hello">
+  <form>
+    <input type="text" id="searchInput">
+    <button type="button" name="button">Search</button>
+  </form>
+  <ul>
+      {{#each documents}}
+          <li>Document #{{_id}}</li>
+      {{/each}}
+  </ul>
+  {{> defaultBootstrapPaginator pagination=templatePagination limit=20 containerClass="text-center"}}
+</template>
