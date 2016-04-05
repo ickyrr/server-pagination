@@ -9,13 +9,14 @@
 </body>
 
 <template name="hello">
-  <form>
-    <input type="text" id="searchInput">
+  <!-- <form>
+    <input type="text" id="searchInput" name="searchInput">
     <button type="button" name="button">Search</button>
-  </form>
+  </form> -->
+  <input type="text" id="searchInput" name="searchInput">
   <ul>
       {{#each documents}}
-          <li>Document #{{_id}}</li>
+          <li>{{_id}}</li>
       {{/each}}
   </ul>
   {{> defaultBootstrapPaginator pagination=templatePagination limit=20 containerClass="text-center"}}
